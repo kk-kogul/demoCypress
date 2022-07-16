@@ -1,0 +1,62 @@
+{
+    "CAREERS_HOME":{
+        "URL" : "https://recruitingbypaycor.com/career/CareerHome*",
+        "METHOD":"GET",
+        "ALIAS" : "CAREERS_HOME"
+    },
+    "LOAD_POSITIONS": {
+        "URL": "https://recruitingbypaycor.com/career/iframe.action*",
+        "METHOD": "GET",
+        "ALIAS" : "LOAD_POSITIONS"
+    },
+    "JOB_DESCRIPTION":{
+        "URL" : "https://recruitingbypaycor.com/career/JobIntroduction*",
+        "METHOD":"GET",
+        "ALIAS" : "JOB_DESCRIPTION"
+    },
+    "JOB_DESCRIPTION_JS":{
+        "URL" : "https://recruitingbypaycor.com/career/node_modules/jquery/dist/jquery.min.js",
+        "METHOD":"GET",
+        "ALIAS" : "JOB_DESCRIPTION_JS"
+    },
+    "SUBMIT_RESUME":{
+        "URL" : "https://recruitingbypaycor.com/career/SubmitResume*",
+        "METHOD":"POST",
+        "ALIAS" : "SUBMIT_RESUME"
+    },
+    "SUBMIT_RESUME_JS": {
+        "URL": "https://recruitingbypaycor.com/career/node_modules/moment/min/moment-with-locales.js",
+        "METHOD": "GET",
+        "ALIAS": "SUBMIT_RESUME_JS"
+    },
+    "SUBMIT_QUESTIONNAIRE":{
+        "URL":"https://recruitingbypaycor.com/career/SubmitQuestionnaire*",
+        "METHOD":"POST",
+        "ALIAS" : "SUBMIT_QUESTIONNAIRE"
+    },
+    "SHOW_VEVRAA":{
+        "URL":"https://recruitingbypaycor.com/career/ShowVevraaForm*",
+        "METHOD":"POST",
+        "ALIAS" : "SHOW_VEVRAA"
+    },
+    "VEVRAA_GENDER" : {
+        "URL":"https://recruitingbypaycor.com/career/*GENDER",
+        "METHOD":"POST",
+        "ALIAS" : "VEVRAA_GENDER"
+    },
+    "VEVRAA_VETRAN" : {
+        "URL":"https://recruitingbypaycor.com/career/*VETERAN",
+        "METHOD":"POST",
+        "ALIAS" : "VEVRAA_VETRAN"
+    },
+    "SUBMIT_VEVRAA":{
+        "URL" : "https://recruitingbypaycor.com/career/SubmitVevraaForm*",
+        "METHOD":"POST",
+        "ALIAS" : "SHOW_VEVRAA"
+    },
+    "SUBMIT_FORM_JS": {
+        "URL": "https://recruitingbypaycor.com/career/node_modules/moment/min/moment-with-locales.js",
+        "METHOD": "GET",
+        "ALIAS": "SUBMIT_FORM_JS"
+    }
+}
