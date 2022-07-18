@@ -1,5 +1,5 @@
 import BasePage from './BasePage'
-import {preparePage,waitForPage} from '../../support/util';
+import {prepareForUrl,waitForPage} from '../../support/util';
 const saveButtonSelector = '#saveBtn';
 const questionSelector = '.gnewtonQuestion';
 const questionText = "Are you legally authorized to work";
@@ -45,7 +45,7 @@ class SponsorshipPage extends BasePage {
     }
 
     clickContinueButton() {
-        preparePage(this.requests['SUBMIT_QUESTIONNAIRE']);
+        prepareForUrl(this.requests['SUBMIT_QUESTIONNAIRE']);
         this.click(this.continueButton);
         waitForPage(this.requests['SUBMIT_QUESTIONNAIRE']);
     }

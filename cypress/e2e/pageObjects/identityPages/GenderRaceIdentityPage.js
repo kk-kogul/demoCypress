@@ -1,5 +1,5 @@
 import IdentificationBasePage from './IdentificationBasePage'
-import {preparePage,waitForPage} from '../../../support/util';
+import {prepareForUrl,waitForPage} from '../../../support/util';
 
 
 class GenderRaceIdentityPage extends IdentificationBasePage {
@@ -13,7 +13,7 @@ class GenderRaceIdentityPage extends IdentificationBasePage {
     }
 
     verifyContentAndContinueToNextPage(){
-        preparePage(this.requests['VEVRAA_GENDER']);
+        prepareForUrl(this.requests['VEVRAA_GENDER']);
         this.isPageLoaded();
         this.continueButton.click();
         waitForPage(this.requests['VEVRAA_GENDER']);

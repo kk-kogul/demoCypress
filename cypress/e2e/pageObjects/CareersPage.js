@@ -1,5 +1,5 @@
 import BasePage from './BasePage'
-import {preparePage,waitForPage} from '../../support/util';
+import {prepareForUrl,waitForPage} from '../../support/util';
 const JOB_DESCRIPTION = 'JOB_DESCRIPTION';
 const OPEN_POSITIONS = require('../../fixtures/openPositions.json');
 
@@ -10,8 +10,8 @@ class CareersPage extends BasePage {
     }
 
 	openJobDescriptionPage(role) {
-		preparePage(this.requests[JOB_DESCRIPTION]);
-		preparePage(this.requests['JOB_DESCRIPTION_JS']);
+		prepareForUrl(this.requests[JOB_DESCRIPTION]);
+		prepareForUrl(this.requests['JOB_DESCRIPTION_JS']);
 		this.click(this.getElementFromFrame('#gnewtonIframe', 'a', role));
 
 		waitForPage(this.requests[JOB_DESCRIPTION]);

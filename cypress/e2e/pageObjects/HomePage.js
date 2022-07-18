@@ -1,6 +1,6 @@
 import BasePage from './BasePage'
 import "cypress-real-events/support";
-import {preparePage,waitForPage} from '../../support/util';
+import {prepareForUrl,waitForPage} from '../../support/util';
 
 class HomePage extends BasePage {
 	constructor(){
@@ -12,7 +12,7 @@ class HomePage extends BasePage {
 	}
 
 	openCareersPage() {
-		preparePage(this.requests['CAREERS_HOME']);
+		prepareForUrl(this.requests['CAREERS_HOME']);
 		// Bring the 'Company's drop down
 		this.realMouseClick(this.getElementContaining('a', 'Company'));
 	    

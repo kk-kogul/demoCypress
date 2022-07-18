@@ -1,5 +1,5 @@
 import IdentificationBasePage from './IdentificationBasePage'
-import {preparePage,waitForPage} from '../../../support/util';
+import {prepareForUrl,waitForPage} from '../../../support/util';
 
 
 class VeteranIdentityPage extends IdentificationBasePage {
@@ -13,7 +13,7 @@ class VeteranIdentityPage extends IdentificationBasePage {
     }
 
     verifyContentAndContinueToNextPage(){
-        preparePage(this.requests['VEVRAA_VETRAN']);
+        prepareForUrl(this.requests['VEVRAA_VETRAN']);
         this.isPageLoaded();
         this.click(this.continueButton);
         waitForPage(this.requests['VEVRAA_VETRAN']);

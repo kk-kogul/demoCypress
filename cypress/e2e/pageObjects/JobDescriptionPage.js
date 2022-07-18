@@ -1,10 +1,10 @@
 import BasePage from './BasePage'
-import {preparePage,waitForPage} from '../../support/util';
+import {prepareForUrl,waitForPage} from '../../support/util';
 const OPEN_POSITIONS = require('../../fixtures/openPositions.json');
 
 
 class JobDescriptionPage extends BasePage {
-    constructor(){
+    constructor() {
         super();
         this.FRAME = this.PAGE_CONSTANTS['IFRAME'];
     }
@@ -14,8 +14,8 @@ class JobDescriptionPage extends BasePage {
     }
 
     clickApplyForThisPosition() {
-        preparePage(this.requests['SUBMIT_RESUME']);
-        // preparePage(this.requests['SUBMIT_RESUME_JS']);
+        prepareForUrl(this.requests['SUBMIT_RESUME']);
+        // prepareForUrl(this.requests['SUBMIT_RESUME_JS']);
         cy.switchToIframes(this.FRAME).find('#gnewtonJobDescriptionBtn > .gnewtonApplyBtn').click();
         waitForPage(this.requests['SUBMIT_RESUME']);
         // waitForPage(this.requests['SUBMIT_RESUME_JS']);

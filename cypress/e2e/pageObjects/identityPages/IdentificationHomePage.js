@@ -1,5 +1,5 @@
 import IdentificationBasePage from './IdentificationBasePage'
-import {preparePage,waitForPage} from '../../../support/util';
+import {prepareForUrl,waitForPage} from '../../../support/util';
 
 
 class IdentificationHomePage extends IdentificationBasePage {
@@ -12,7 +12,7 @@ class IdentificationHomePage extends IdentificationBasePage {
     }
 
     verifyContentAndContinueToNextPage(){
-       preparePage(this.requests['SHOW_VEVRAA']);
+       prepareForUrl(this.requests['SHOW_VEVRAA']);
        this.continueButton.should('be.visible');
        this.continueButton.click();
        waitForPage(this.requests['SHOW_VEVRAA']);

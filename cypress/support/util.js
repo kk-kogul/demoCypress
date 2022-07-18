@@ -1,5 +1,5 @@
 
-const preparePage = (key) => {
+const prepareForUrl = (key) => {
     cy.intercept({
         method: `${key['METHOD']}`,
         url: `${key['URL']}`,
@@ -7,8 +7,10 @@ const preparePage = (key) => {
 }
 
 const waitForPage = (key) => {
-    cy.wait(500);
-    cy.wait(`@${key['ALIAS']}`,{timeout:20000}).its('response.statusCode').should('equal', 200);
+    cy.wait(1000);
+    cy.wait(`@${key['ALIAS']}`, {timeout:20000})
+        .its('response.statusCode')
+        .should('equal', 200);
 }
 
-module.exports = {preparePage,waitForPage}
+module.exports = {prepareForUrl,waitForPage}

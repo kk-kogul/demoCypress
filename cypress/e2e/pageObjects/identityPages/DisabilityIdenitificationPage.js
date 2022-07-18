@@ -1,5 +1,5 @@
 import IdentificationBasePage from './IdentificationBasePage'
-import {preparePage,waitForPage} from '../../../support/util';
+import {prepareForUrl,waitForPage} from '../../../support/util';
 
 
 class DisabilityIdentificationPage extends IdentificationBasePage {
@@ -13,8 +13,8 @@ class DisabilityIdentificationPage extends IdentificationBasePage {
     }
 
     verifyContentAndContinueToNextPage(){
-        preparePage(this.requests['SUBMIT_VEVRAA']);
-        preparePage(this.requests['SUBMIT_FORM_JS']);
+        prepareForUrl(this.requests['SUBMIT_VEVRAA']);
+        prepareForUrl(this.requests['SUBMIT_FORM_JS']);
         this.isPageLoaded();
         this.click(this.continueButton);
         waitForPage(this.requests['SUBMIT_VEVRAA']);

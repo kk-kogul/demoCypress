@@ -1,5 +1,5 @@
 import IdentificationBasePage from './IdentificationBasePage'
-import {preparePage,waitForPage} from '../../../support/util';
+import {prepareForUrl,waitForPage} from '../../../support/util';
 
 
 class CandidateInformationPage extends IdentificationBasePage {
