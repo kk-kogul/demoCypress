@@ -19,3 +19,8 @@ Steps to run the tests:
 - this installs all the node-modules files needed for cypress to run
 7. Run the tests with the command 'npx cypress run' or run 'npx cypress open' to open Cypress dashboard and run tests 
  from the dashboard. There'll be only one tests.cy.js spec file which holds the tests
+   1. To run it with 'npx cypress run' - no dependencies are needed and the tests run in Headless mode in Electron Browser
+   2. To run it with 'npx cypress open' i.e from the cypress dashboard and a browser of your choice (Chrome or Edge) - 
+      Please install the latest stable version of the browser. 
+      
+   Tests have been verified to run successfully on Chrome, Edge & Electron
