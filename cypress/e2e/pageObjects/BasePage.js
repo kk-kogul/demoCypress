@@ -1,4 +1,3 @@
-import "cypress-xpath";
 const requests = require('../../fixtures/requestHeader.json');
 const htmlConstants = require('../../fixtures/htmlConstants.json');
 const pageConstants = require('../../fixtures/pageConstants.json');
@@ -24,11 +23,7 @@ class BasePage {
     }
 
     getElementFromFrame(frame, element){
-        return cy.switchToIframes(frame).find(element);
-    }
-
-    getElementFromFrameWithXpath(frame,element){
-        return cy.switchToIframes(frame).xpath(element);
+        return cy.getIframeBody(frame).find(element);
     }
 
     removeTargetAttr(element) {

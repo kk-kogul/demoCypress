@@ -13,4 +13,4 @@ const waitForPage = (key) => {
         .should('equal', 200);
 }
 
-module.exports = {prepareForUrl,waitForPage}
+module.exports = {prepareForUrl, waitForPage}

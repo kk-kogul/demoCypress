@@ -8,7 +8,7 @@ class IdentificationHomePage extends IdentificationBasePage {
     }
 
     isPageLoaded() {
-        cy.switchToIframes(this.FRAME).find('b').contains("To help us measure how we are doing"); 
+        cy.getIframeBody(this.FRAME).find('b').contains("To help us measure how we are doing"); 
     }
 
     verifyContentAndContinueToNextPage(){

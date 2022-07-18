@@ -16,7 +16,7 @@ class SponsorshipPage extends BasePage {
     }
 
     isPageLoaded() {
-        cy.switchToIframes(this.FRAME).find(questionSelector).contains(questionText); 
+        cy.getIframeBody(this.FRAME).find(questionSelector).contains(questionText); 
     }
 
     selectOptions(authorizedToWork, requireSponsorship) {

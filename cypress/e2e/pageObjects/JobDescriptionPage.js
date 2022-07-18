@@ -10,13 +10,13 @@ class JobDescriptionPage extends BasePage {
     }
 
     isPageLoaded(role) {
-        cy.switchToIframes(this.FRAME).find('b').contains(OPEN_POSITIONS[role]['NAME_IN_JD_PAGE']);
+        cy.getIframeBody(this.FRAME).find('b').contains(OPEN_POSITIONS[role]['NAME_IN_JD_PAGE']);
     }
 
     clickApplyForThisPosition() {
         prepareForUrl(this.requests['SUBMIT_RESUME']);
         // prepareForUrl(this.requests['SUBMIT_RESUME_JS']);
-        cy.switchToIframes(this.FRAME).find('#gnewtonJobDescriptionBtn > .gnewtonApplyBtn').click();
+        cy.getIframeBody(this.FRAME).find('#gnewtonJobDescriptionBtn > .gnewtonApplyBtn').click();
         waitForPage(this.requests['SUBMIT_RESUME']);
         // waitForPage(this.requests['SUBMIT_RESUME_JS']);
     }

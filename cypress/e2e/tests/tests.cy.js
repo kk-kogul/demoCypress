@@ -1,5 +1,5 @@
-import pageFactory from './PageFactory'
-import Setup from './Setup'
+import pageFactory from '../PageFactory'
+import Setup from '../Setup'
 const ROLE = "SDET"
 
 describe('Iodine Careers Test',() => {

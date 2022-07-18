@@ -19,7 +19,7 @@ class CareersPage extends BasePage {
 	}
 
 	getElementFromFrame(frame, element, role){
-        return cy.switchToIframes(frame).find(element).contains(OPEN_POSITIONS[role]['NAME']);
+        return cy.getIframeBody(frame).find(element).contains(OPEN_POSITIONS[role]['NAME']);
     }
 }
 
